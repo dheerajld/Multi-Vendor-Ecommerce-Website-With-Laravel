@@ -6,6 +6,26 @@
 
 ![Work in Progress](https://img.shields.io/badge/Status-Work%20in%20Progress-orange)
 ![screenshots](https://raw.githubusercontent.com/ali-azgar-rakib/Multi-Vendor-Ecommerce-Website-With-Laravel/master/public/screenshots/home-page.png)
+## Features
+
+The ecommerce website offers the following features:
+
+- **Multiple User Roles**: The website has separate dashboards for admin, vendor, and user, each with their own set of functionalities and permissions.
+
+- **Cart System**: Website visitors can add products to the cart without logging in. The cart system allows adding products without page reloading.
+
+- **Product Variations**: Each product can have multiple images, sizes, and colors.
+
+- **Product Filtering**: Users can browse products by category, shop, and brand to easily find their desired items.
+
+- **Multiple Payment Methods**: The website supports multiple payment methods, including cash in and SSL Commerce integration.
+
+- **User Reviews and Ratings**: After purchasing a product, users can provide reviews and ratings.
+
+- **Product Delivery Tracking**: Users can track the delivery process and see the current state of their ordered products.
+
+- **Product Returns**: Users have the option to return products they are not satisfied with.
+
 
 
 
