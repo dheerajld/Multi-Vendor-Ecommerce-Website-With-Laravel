@@ -14,6 +14,7 @@ To install and run the project locally using Laravel Sail, please follow these s
 ```bash
 git clone https://github.com/ali-azgar-rakib/Multi-Vendor-Ecommerce-Website-With-Laravel.git
 cd Multi-Vendor-Ecommerce-Website-With-Laravel
+```
 
 ## Installation
 
@@ -24,6 +25,7 @@ To install and run the project locally using Laravel Sail, please follow these s
 ```bash
 git clone https://github.com/ali-azgar-rakib/Multi-Vendor-Ecommerce-Website-With-Laravel.git
 cd Multi-Vendor-Ecommerce-Website-With-Laravel
+```
 
 2. Install dependencies using Composer:
 
