@@ -124,7 +124,8 @@
                                     <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
                                 </div>
                                 <div class="product-extra-link2">
-                                    <button type="submit" class="button button-add-to-cart"><i
+                                    <input type="hidden" id="product_details" value="{{ $product->id }}">
+                                    <button onclick="cartSubmit('details')" class="button button-add-to-cart"><i
                                             class="fi-rs-shopping-cart"></i>Add to cart</button>
                                     <a aria-label="Add To Wishlist" class="action-btn hover-up"
                                         href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
@@ -522,7 +523,8 @@
                                                 href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
                                             <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i
                                                     class="fi-rs-shuffle"></i></a>
-                                            <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal"
+                                            <a onclick="quickViewLoad({{$related_product }})" aria-label="Quick view"
+                                                class="action-btn" data-bs-toggle="modal"
                                                 data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">

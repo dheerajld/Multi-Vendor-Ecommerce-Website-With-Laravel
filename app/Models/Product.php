@@ -50,4 +50,9 @@ class Product extends Model
     {
         return $this->belongsTo(User::class, 'vendor_id');
     }
+
+    public function carts(): HasMany
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

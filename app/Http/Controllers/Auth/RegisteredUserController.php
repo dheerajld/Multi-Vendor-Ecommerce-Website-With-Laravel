@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\CartProcceed;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -43,6 +44,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
+        event(new CartProcceed($user));
 
         Auth::login($user);
 

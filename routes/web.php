@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\FrontendProductController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -122,15 +123,17 @@ Route::get('/vendor/login', [VendorController::class, 'login'])->middleware('gue
 
 
 // Frontend User Route
-
-Route::get('/vendor-list', [HomeController::class, 'vendor_list'])->name('vendor_list');
-Route::get('/category/{category}', [HomeController::class, 'product_by_category'])->name('product_by_category');
-Route::get('/{vendor}', [HomeController::class, 'vendor_details'])->name('vendor_details');
-Route::get('/{product}/{slug}', [FrontendProductController::class, 'product_details'])->name('product_details');
-
-
-
 Route::middleware(['auth'])->name('user.')->group(function () {
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
     Route::post('/user-update', [UserController::class, 'store'])->name('profile.store');
 });
+
+
+
+Route::get('/ajax-carts', [CartController::class, 'get_carts_data']);
+Route::get('/add-to-cart/{id}', [CartController::class, 'add_to_cart']);
+Route::get('/remove-from-cart/{id}', [CartController::class, 'remove_from_cart']);
+Route::get('/vendor-list', [HomeController::class, 'vendor_list'])->name('vendor_list');
+Route::get('/category/{category}', [HomeController::class, 'product_by_category'])->name('product_by_category');
+Route::get('/{vendor}', [HomeController::class, 'vendor_details'])->name('vendor_details');
+Route::get('/{product}/{slug}', [FrontendProductController::class, 'product_details'])->name('product_details');

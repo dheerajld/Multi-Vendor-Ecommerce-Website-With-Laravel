@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\CartProcceed;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
@@ -27,7 +28,10 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        event(new CartProcceed($request->user()));
+
         $request->session()->regenerate();
+
 
         if ($request->user()->role === 'admin') {
             return redirect()->intended(RouteServiceProvider::ADMIN_HOME);

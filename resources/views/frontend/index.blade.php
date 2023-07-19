@@ -137,8 +137,9 @@
                                             class="fi-rs-heart"></i></a>
                                     <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i
                                             class="fi-rs-shuffle"></i></a>
-                                    <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal"
-                                        data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                    <a onclick="quickViewLoad({{$product }})" aria-label="Quick view" class="action-btn"
+                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                                            class="fi-rs-eye"></i></a>
                                 </div>
                                 <div class="product-badges product-badges-position product-badges-mrg">
 
@@ -174,7 +175,8 @@
                                     <span class="font-small ml-5 text-muted"> (4.0)</span>
                                 </div>
                                 <div>
-                                    <span class="font-small text-muted">By <a href="vendor-details-1.html">{{
+                                    <span class="font-small text-muted">By <a
+                                            href="{{ $product->vendor?->id ? route('vendor_details',$product->vendor->id): '#' }}">{{
                                             $product->vendor->name ?? 'Owner' }}</a></span>
                                 </div>
                                 <div class="product-card-bottom">
@@ -192,7 +194,9 @@
                                     </div>
                                     @endif
                                     <div class="add-cart">
-                                        <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add
+                                        <input type="hidden" id="product_new_product" value="{{ $product->id }}">
+                                        <a class="add" href="#"" onclick=" cartSubmit('new_product')"><i
+                                                class="fi-rs-shopping-cart mr-5"></i>Add
                                         </a>
                                     </div>
                                 </div>
@@ -237,8 +241,9 @@
                                             class="fi-rs-heart"></i></a>
                                     <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i
                                             class="fi-rs-shuffle"></i></a>
-                                    <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal"
-                                        data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                    <a onclick="quickViewLoad({{$product }})" aria-label="Quick view" class="action-btn"
+                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                                            class="fi-rs-eye"></i></a>
                                 </div>
                                 <div class="product-badges product-badges-position product-badges-mrg">
 
@@ -359,7 +364,8 @@
                                                 href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
                                             <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i
                                                     class="fi-rs-shuffle"></i></a>
-                                            <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal"
+                                            <a onclick="quickViewLoad({{$product }})" aria-label="Quick view"
+                                                class="action-btn" data-bs-toggle="modal"
                                                 data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
@@ -480,8 +486,9 @@
                                             class="fi-rs-heart"></i></a>
                                     <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i
                                             class="fi-rs-shuffle"></i></a>
-                                    <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal"
-                                        data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                    <a onclick="quickViewLoad({{$product }})" aria-label="Quick view" class="action-btn"
+                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                                            class="fi-rs-eye"></i></a>
                                 </div>
                                 <div class="product-badges product-badges-position product-badges-mrg">
 
