@@ -1,20 +1,13 @@
 # Multi-Vendor Ecommerce Website
 
+
+##This is the repository for a multi-vendor ecommerce website built using Laravel, JavaScript, and Fetch API. The website has three different user roles: admin, vendor, and user. Each role has specific permissions and access levels within the system. The website includes features such as a shopping cart, product categories, checkout options, payment integration with SSL Commerce, multi-user roles, and multiple permissions.##
+
+
 ![Work in Progress](https://img.shields.io/badge/Status-Work%20in%20Progress-orange)
 ![screenshots](https://raw.githubusercontent.com/ali-azgar-rakib/Multi-Vendor-Ecommerce-Website-With-Laravel/master/public/screenshots/home-page.png)
 
-This is the repository for a multi-vendor ecommerce website built using Laravel, JavaScript, and Fetch API. The website has three different user roles: admin, vendor, and user. Each role has specific permissions and access levels within the system. The website includes features such as a shopping cart, product categories, checkout options, payment integration with SSL Commerce, multi-user roles, and multiple permissions.
 
-## Installation
-
-To install and run the project locally using Laravel Sail, please follow these steps:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/ali-azgar-rakib/Multi-Vendor-Ecommerce-Website-With-Laravel.git
-cd Multi-Vendor-Ecommerce-Website-With-Laravel
-```
 
 ## Installation
 
