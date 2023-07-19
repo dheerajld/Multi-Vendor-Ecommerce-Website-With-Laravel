@@ -68,9 +68,8 @@ If you want to populate the database with sample data, run the following command
 8.Build the frontend assets:
 
 ```bash
-
-./vendor/bin/sail up
-
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev
 ```
 
 9. You can now access the website by visiting http://localhost:8080 in your web browser.
